@@ -1,0 +1,25 @@
+{
+  "center": "IT Academy",
+  "branches": [
+    {
+      "name": "Chilonzor",
+      "teachers": [
+        { "id": 1, "name": "Ali", "subject": "Python", "experience": 5 },
+        { "id": 2, "name": "Vali", "subject": "JavaScript", "experience": 3 }
+      ],
+      "students": [
+        { "id": 101, "name": "Hasan", "course": "Python", "payment": 600000 },
+        { "id": 102, "name": "Husan", "course": "JavaScript", "payment": 500000 }
+      ]
+    },
+    {
+      "name": "Yunusobod",
+      "teachers": [
+        { "id": 3, "name": "Aziza", "subject": "Python", "experience": 6 }
+      ],
+      "students": [
+        { "id": 103, "name": "Malika", "course": "Python", "payment": 650000 }
+      ]
+    }
+  ]
+}
