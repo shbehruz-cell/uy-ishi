@@ -22,10 +22,10 @@ class widget(QWidget):
 
 
         self.jins_lbl = QLabel("Jins")
-        self.male_r = QRadioButton()
-        self.male_lbl = QLabel("Male")
-        self.female_r = QRadioButton()
-        self.female_lbl = QLabel("Female")
+        self.male_r = QRadioButton('male')
+        self.male_r.setChecked(True)
+        self.female_r = QRadioButton('female')
+
 
 
         self.shaxar_lbl = QLabel("shaxar")
@@ -36,14 +36,12 @@ class widget(QWidget):
         self.btn_ok = QPushButton("OK")
         self.btn_ok.clicked.connect(self.ok)
         self.btn_exit = QPushButton("Exit")
-
+        self.btn_exit.clicked.connect(exit)
     
 
         self.jins_h.addWidget(self.jins_lbl)
         self.jins_h.addWidget(self.male_r)
-        self.jins_h.addWidget(self.male_lbl)
         self.jins_h.addWidget(self.female_r)
-        self.jins_h.addWidget(self.female_lbl)
 
         self.shaxar.addWidget(self.shaxar_lbl)
         self.shaxar.addWidget(self.shaxar_combo)
@@ -96,14 +94,9 @@ class widget(QWidget):
         shaxar = self.shaxar_combo.currentText()
         tuman = self.tuman_combo.currentText()
         
-        if name and second and age and jins and shaxar and tuman:
+        if name and second and age and jins and tuman:
 
-            data["name"] = name
-            data["second"] = second
-            data["age"] = age
-            data["jins"] = jins
-            data["shaxar"] = shaxar
-            data["tuman"] = tuman
+            data = {'name': name,'second':second,'age':age,'jins':jins,'shaxar':shaxar,'tuman':tuman}
             
             f = open("test.json", "r")
             loaded = json.load(f)
