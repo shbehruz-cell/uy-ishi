@@ -1,7 +1,6 @@
 from PyQt5.QtWidgets import QApplication , QWidget, QMessageBox , QComboBox , QRadioButton , QLineEdit,QVBoxLayout,QHBoxLayout,QLabel,QPushButton
 import json
 
-f = open("test.json","r+")
 
 
 class widget(QWidget):
